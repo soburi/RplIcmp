@@ -12,6 +12,11 @@ override_dh_auto_build:
 	make lib
 	dh_auto_build
 
+override_dh_auto_clean:
+	dh_auto_clean
+	make clean
+	rm -f *.o *.so
+	rm -rf build/
 
 # If you need to rebuild the Sphinx documentation
 # Add spinxdoc to the dh --with line
