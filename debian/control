@@ -1,0 +1,29 @@
+Source: rplicmp
+Section: python
+Priority: optional
+Maintainer: soburi <soburi@gmail.com>
+Build-Depends: debhelper (>= 9), dh-python, python-all, python-setuptools, libcap-dev
+Standards-Version: 3.9.8
+Homepage: https://github.com/tcheneau/RplIcmp/
+X-Python-Version: >= 2.6
+#Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/rplicmp.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/rplicmp.git/
+#Testsuite: autopkgtest-pkg-python
+
+Package: python-rplicmp
+Architecture: any
+Depends: ${python:Depends}, ${misc:Depends}, libc6
+Suggests: python-rplicmp-doc
+Description: handling ICMP messaging for the RPL protocol (Python 2)
+ A python module for handling ICMP messaging for the RPL protocol
+ .
+ This package installs the library for Python 2.
+
+Package: python-rplicmp-doc
+Architecture: all
+Section: doc
+Depends: ${sphinxdoc:Depends}, ${misc:Depends}
+Description: handling ICMP messaging for the RPL protocol (common documentation)
+ A python module for handling ICMP messaging for the RPL protocol
+ .
+ This is the common documentation package.
